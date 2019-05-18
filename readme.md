@@ -16,3 +16,7 @@ The [offcial McGill LRS catalog](https://lrs.mcgill.ca/) only allows selection b
 * Find lecture recordings by subject, course number, and term
 * Responsive design
 * Full client-side search
+
+# Data Source
+* Lecture Recording Listing: [COOL FRONT PAGE](https://lrs.mcgill.ca/)
+* Class Average Data: [McGillEnhanced](https://github.com/demetrios-koziris/McGillEnhanced)
