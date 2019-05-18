@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>LRS+</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row mt-3" id="header">
+      <div class="col-md-3">
+        <img class="w-100" style="max-width: 250px" src="https://www.mcgill.ca/study/2018-2019/sites/all/themes/moriarty/images/logo-red.svg">
+      </div>
+      <div class="col-md-9">
+        <h1>LRS+</h1>
+        <h3>A better McGill Lecture Recording System (LRS) catalog</h3>
+      </div>
+    </div>
+
+    <!-- 
+    Course Filter 
+    -->
+
+    <form class="form-inline">
+      <div class="form-group mr-4">
+        <label for="subject_select" class="mr-2">Subject:</label>
+        <select class="form-control" id="subjectSelect">
+          <option value="">Choose a subject</option>
+        </select>
+      </div>
+      <div class="form-group mr-4">
+        <label for="number_select" class="mr-2">Course Number:</label>
+        <select class="form-control" id="numberSelect">
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="term_select" class="mr-2">Term:</label>
+        <select class="form-control" id="termSelect">
+        </select>
+      </div>
+    </form>
+
+    <!-- 
+      Course Display
+    -->
+
+    <div class="row" id="courseList">
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
