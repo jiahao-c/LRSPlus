@@ -14,14 +14,18 @@ $.get("result.json", function (data, status) {
             .append($('<option>', { value: key })
                 .text(value));
     });
+});
+
+$("#showall").click(() => {
     filter();
+    $("#showall").remove();
 });
 
 $('#subjectSelect').change(() => {
     $('#numberSelect').empty();
     $('#numberSelect')
-    .append($('<option>', {value:""})
-        .text("Choose a number"));
+        .append($('<option>', { value: "" })
+            .text("Choose a number"));
     $('#termSelect').empty();
     let selectedSubject = $('#subjectSelect').val();
     let courseNumbers = {};
@@ -41,8 +45,8 @@ $('#subjectSelect').change(() => {
 $('#numberSelect').change(() => {
     $('#termSelect').empty();
     $('#termSelect')
-    .append($('<option>', {value:""})
-    .text("Choose a term"));
+        .append($('<option>', { value: "" })
+            .text("Choose a term"));
     let selectedSubject = $('#subjectSelect').val();
     let selectedNumber = $('#numberSelect').val();
     let terms = {};
@@ -64,7 +68,7 @@ $('#termSelect').change(() => {
 });
 
 /* Filter */
-function filter(){
+function filter() {
     $('#courseList').empty();
     let subject = $('#subjectSelect').val();
     let number = $('#numberSelect').val();
@@ -74,21 +78,20 @@ function filter(){
     console.log(`subject:${term}`);
 
     $.each(courses, (_, course) => {
-        if(compare(course.subject, subject) && 
-        compare(course.number, number) && 
-        compare(course.term, term)){
+        if (compare(course.subject, subject) &&
+            compare(course.number, number) &&
+            compare(course.term, term)) {
             $('#courseList')
-            .append($(`<div class="col-xl-4 col-lg-6 mt-3"> <div class="card">
+                .append($(`<div class="col-xl-4 col-lg-6 mt-3"> <div class="card">
             <div class="card-body"> <h5 class="card-title">${course.subject} ${course.number} - ${course.term}</h5>
             <p class="card-text"> <b>${course.name}</b><br> Instructor: ${course.prof} <br>
             Class Average: ${course.average} </p> <a href="${course.link}"
             class="btn btn-primary">Watch Recordings</a> </div> </div> </div>`));
         }
     });
-
 }
 
-function compare(tag, selectedTag){
-    if(selectedTag == tag || selectedTag == "" ||  selectedTag == null){return true};
-    return false; 
+function compare(tag, selectedTag) {
+    if (selectedTag == tag || selectedTag == "" || selectedTag == null) { return true };
+    return false;
 }

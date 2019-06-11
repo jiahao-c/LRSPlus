@@ -16,12 +16,10 @@
 <body>
   <div class="container">
     <div class="row mt-3" id="header">
-      <div class="col-md-3">
-        <img class="w-100" style="max-width: 250px" src="https://cdn.jsdelivr.net/gh/jhcccc/LRSPlus@master/img/logo-red.svg">
-      </div>
       <div class="col-md-9">
-        <h1>LRS+</h1>
-        <h3>A better McGill Lecture Recording System (LRS) catalog</h3>
+        <h4>A better <img class="w-25" style="max-width: 250px"
+            src="https://cdn.jsdelivr.net/gh/jhcccc/LRSPlus@master/img/logo-red.svg"> Lecture Recording System (LRS)
+          catalog</h4>
       </div>
     </div>
 
@@ -53,10 +51,62 @@
     -->
 
     <div class="row" id="courseList">
+      <!-- 
+          Default Displayed Courses
+          -->
+      <div class="col-xl-4 col-lg-6 mt-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">ANAT 321 - 2014-FALL</h5>
+            <p class="card-text"> <b>Circuitry of the Human Brain</b><br> Instructor: David S Ragsdale <br>
+              Class Average: Info Not Available </p> <a href="https://lrs.mcgill.ca/ListRecordings.aspx?CourseID=10435"
+              class="btn btn-primary">Watch Recordings</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 mt-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">ATOC 185 - 2014-FALL</h5>
+            <p class="card-text"> <b>Natural Disasters</b><br> Instructor: John Stix <br>
+              Class Average: B+ </p> <a href="https://lrs.mcgill.ca/ListRecordings.aspx?CourseID=9858"
+              class="btn btn-primary">Watch Recordings</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 mt-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">BIOC 311 - 2014-FALL</h5>
+            <p class="card-text"> <b>Metabolic Biochemistry</b><br> Instructor: Julie St-Pierre <br>
+              Class Average: Info Not Available </p> <a href="https://lrs.mcgill.ca/ListRecordings.aspx?CourseID=10451"
+              class="btn btn-primary">Watch Recordings</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 mt-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">BIOC 450 - 2014-FALL</h5>
+            <p class="card-text"> <b>Protein Structure and Function</b><br> Instructor: Bhushan Nagar <br>
+              Class Average: Info Not Available </p> <a href="https://lrs.mcgill.ca/ListRecordings.aspx?CourseID=10452"
+              class="btn btn-primary">Watch Recordings</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 mt-3">
+          <div class="card">
+            <button type="button" class="btn btn-outline-primary" id="showall">Show All</button>
+          </div>
+        </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
   <script src="app.js"></script>
 </body>
-
+<footer>
+    <div class="text-center">
+    <p>© 2019 jhccc</p>
+  </div>
+</footer>
 </html>
