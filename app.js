@@ -9,11 +9,20 @@ $.get("result.json", function (data, status) {
         subjects[course.subject] = course.subject;
 
     });
+    let subjectSelect = $('#subjectSelect');
     $.each(subjects, (key, value) => {
-        $('#subjectSelect')
+        subjectSelect
             .append($('<option>', { value: key })
                 .text(value));
     });
+    //sort options alphabetically
+    subjectSelect.html(subjectSelect.find('option').sort(function(x, y) {
+        return $(x).text() > $(y).text() ? 1 : -1;
+    }));
+    //Add default option
+    subjectSelect
+    .prepend($('<option selected>', { value:""})
+        .text("Choose a subject"));
 });
 
 $("#showall").click(() => {
@@ -24,7 +33,7 @@ $("#showall").click(() => {
 $('#subjectSelect').change(() => {
     $('#numberSelect').empty();
     $('#numberSelect')
-        .append($('<option>', { value: "" })
+        .append($('<option>', { value:""})
             .text("Choose a number"));
     $('#termSelect').empty();
     let selectedSubject = $('#subjectSelect').val();
