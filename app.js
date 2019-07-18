@@ -21,8 +21,7 @@ $.get("result.json", function (data, status) {
     }));
     //Add default option
     subjectSelect
-    .prepend($('<option selected>', { value:""})
-        .text("Choose a subject"));
+    .prepend('<option selected value="">Choose a subject</option>');
 });
 
 $("#showall").click(() => {
