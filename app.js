@@ -2,7 +2,7 @@
 
 /* Selections */
 let courses;
-$.get("result.json", function (data, status) {
+$.get("https://cdn.jsdelivr.net/gh/jhcccc/LRSPlus@master/result.json", function (data, status) {
     courses = data.courses;
     let subjects = {};
     $.each(courses, (_, course) => {
