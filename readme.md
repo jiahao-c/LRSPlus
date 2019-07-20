@@ -13,6 +13,8 @@ The [offcial McGill LRS catalog](https://lrs.mcgill.ca/) only allows selection b
 * Find lecture recordings by subject, course number, and term
 * Responsive design
 * Full client-side search
+* Global CDN by jsdelivr
+* Support URL Params e.g. `subject=COMP&number=250` or  `subject=COMP`
 
 # Data Source
 * Lecture Recording Listing: [COOL FRONT PAGE](https://lrs.mcgill.ca/)
